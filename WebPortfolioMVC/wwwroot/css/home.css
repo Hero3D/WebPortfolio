@@ -1,0 +1,45 @@
+﻿
+body {
+    color: black;
+    text-align: center;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style:none;
+}
+
+a{
+    color:black;
+}
+
+.home-container {
+    display: inline-flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.home-intro {
+   
+}
+
+.home-nav ul{
+    display:flex;
+    flex-direction:row;
+}
+
+.home-nav li{
+ flex:auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .home-nav ul{
+        flex-direction: column;
+    }
+}
+

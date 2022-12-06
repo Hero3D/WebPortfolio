@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPortfolioMVC", "WebPortfolioMVC\WebPortfolioMVC.csproj", "{F476DC4E-9ADF-49A4-AA01-5839C352D99D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPortfolioDataLibrary", "WebPortfolioDataLibrary\WebPortfolioDataLibrary.csproj", "{3A7097CF-4892-44A3-A453-E3C8C3070DC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F476DC4E-9ADF-49A4-AA01-5839C352D99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F476DC4E-9ADF-49A4-AA01-5839C352D99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F476DC4E-9ADF-49A4-AA01-5839C352D99D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A7097CF-4892-44A3-A453-E3C8C3070DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7097CF-4892-44A3-A453-E3C8C3070DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A7097CF-4892-44A3-A453-E3C8C3070DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A7097CF-4892-44A3-A453-E3C8C3070DC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
