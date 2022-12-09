@@ -2,20 +2,23 @@
     ViewData["Title"] = "Home Page";
 }
 
-<link rel="stylesheet" href="~/css/home.css" />
+<link href="~/css/index.css" rel="stylesheet" type="text/css" />
 
-<section class="home-container">
+<header class="index-intro">
+    <h1 class="index-title">Nathan Bosman</h1>
+    <h4 class="index-subtitle">Full Stack Software Developer</h4>
+</header>
 
-    <heading class="home-intro">
-        <h1>Nathan Bosman</h1>
-        <h3>Full Stack Software Developer</h3>
-    </heading>
-
-    <section class="home-nav">
-        <ul>
-            <li><a asp-area="" asp-controller="Home" asp-action="About">Info</a></li>
-            <li><a asp-area="" asp-controller="Home" asp-action="Index">Projects</a></li>
-            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-        </ul>
-    </section>
+<section class="index-nav">
+    <ul>
+        <li>
+            <a href="@Url.Action("About", "Home")">About</a>
+        </li>
+        <li>
+            <a href="@Url.Action("Index", "Home")">Projects</a>
+        </li>
+        <li>
+            <a href="@Url.Action("Contact", "Home")">Contact</a>
+        </li>
+    </ul>
 </section>
