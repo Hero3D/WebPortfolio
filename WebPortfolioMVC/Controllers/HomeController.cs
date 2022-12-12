@@ -29,10 +29,16 @@ namespace WebPortfolioMVC.Controllers
             return View();
         }
 
+        public IActionResult Projects()
+        {
+            return PartialView("_Projects");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

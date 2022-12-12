@@ -1,21 +1,52 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "/Views/Shared/_Layout.cshtml";
 }
 
 <link href="~/css/index.css" rel="stylesheet" type="text/css" />
 
 <img class="planet-gif noselect" src="~/images/PlanetGif3.gif" height="175" />
 
+
 <header class="index-intro noselect">
     <h1 class="index-title">Nathan Bosman</h1>
     <h4 class="index-subtitle">Full Stack Software Developer</h4>
 </header>
 
-
 <section class="index-nav">
     <ul class="index-nav-list">
         <li><a asp-controller="Home" asp-action="About" class="index-nav-list-item">About</a></li>
-        <li><a asp-controller="Home" asp-action="Index" class="index-nav-list-item">Projects</a></li>
-        <li><a asp-controller="Home" asp-action="Contact" class="index-nav-list-item">Contact</a></li>
+        <li><button class="index-nav-list-item index-nav-projects" style="border:none; background:none;">Projects</button></li>
+        <li><a asp-controller="Home" asp-action="Contact" class="index-nav-list-item ">Contact</a></li>
     </ul>
 </section>
+
+
+
+<script>
+
+    $(".index-nav-projects").click(function () {
+
+        $.ajax({
+            url: "Home/Projects",
+            type: "GET",
+            success: function (response) {
+
+                location.hash = 'Contact';
+
+
+                $(".container").fadeOut(500, function () {
+                    $(".container").html(response);
+                    $('.container').fadeIn(500);
+                })
+
+                $(window).on('popstate', function () {
+                    location.reload(true);
+                });
+            }
+        });
+    })
+
+
+
+</script>

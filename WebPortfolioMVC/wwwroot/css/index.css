@@ -53,8 +53,8 @@
 .index-nav-list-item {
     order: 100;
     z-index: 100;
-}
 
+}
 
 .index-nav-list-item:hover {
     flex: none;
