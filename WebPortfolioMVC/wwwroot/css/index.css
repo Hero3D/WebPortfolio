@@ -1,112 +1,72 @@
-﻿html, body {
-    padding: 0;
-    font-family: "Times New Roman", Times, serif;
-    letter-spacing: -.25rem;
+﻿ul{
+    padding:0;
+    display:flex;
+    flex-direction:row;
 }
 
-.container a {
-    color: #636363;
-}
-
-
-.index-nav-list-item:hover {
- text-decoration: none; }
-
-.container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.index-title {
-    color: #182F5B;
-    font-size: 5.5rem;
-    margin-bottom:0;
-}
-.index-subtitle {
-    color: grey;
-    font-size: 3.1rem;
-    margin-top: 0;
-}
-
-.index-intro, .planet-gif {
-    position: absolute;
-}
-.index-nav {
-    padding-top: 55vh;
-}
-
-.index-nav ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-}
-
-.index-nav-list li {
+li{
     flex-grow: 1;
-    font-size:3.5rem;
-    margin:2.75rem;
-}
-.index-nav-list-item {
-    order: 100;
-    z-index: 100;
-
 }
 
-.index-nav-list-item:hover {
-    flex: none;
-    font-size: 4rem;
-    color: black;
+.container{
+    display:flex;
+    flex-direction:column;
+    margin:auto;
 }
 
-.planet-gif {
-    transform: translate(-90%, -10%) rotate(-25deg);
-    order: -10;
+.index-main{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
 }
 
-@media screen and (max-height: 350px){
-    .planet-gif {
-        opacity: .8;
-        transform: none;
-        color:blue;
-    }
 
-    .planet-gif {
-        filter: hue-rotate(180deg);
-        -webkit-filter: hue-rotate(180deg);
-    }
+.index-main-image{
+    height: 550px;
+    padding: 50px;
 }
 
-@media screen and (max-width:500px){
-    .index-nav ul {
-        flex-direction: column;
-    }
-
-    .planet-gif {
-        height:100px;
-        transform: none;
-        top: 75vh;
-    }
-
-    .index-intro{
-        top:10vh;
-    }
+.index-skills{
+    display:flex;
+    flex-direction:row;
+    text-align:center;
 }
 
-@media screen and (max-width:500px), screen and (max-height: 350px) {
-    .index-nav {
-        padding: 0;
+.index-skills > div{
+    padding: 0;
+    flex-grow: 1;
+    /*border: 1px dashed lightgrey;*/
+}
+
+    .index-skills div > ul {
+        border: 1px dashed lightgrey;
+        padding: 5px;
     }
 
-    .index-title{
-        font-size:3.5rem;
+
+@media screen and (max-width: 767px) {
+    .index-main, .index-skills{
+        flex-direction:column;
     }
 
-    .index-subtitle {
-        font-size: 1.6rem;
+    .index-main-image {
+        height: 350px;
+    }
+
+    body{
+        text-align:center;
     }
 }
 
+@media screen and (min-width: 767px){
+    .index-main {
+        padding-bottom: 150px;
+    }
+
+
+    .index-intro {
+        padding-left: 150px;
+    }
+}

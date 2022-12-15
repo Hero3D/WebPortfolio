@@ -1,20 +1,39 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
+html, body{
+    font-family:'Times New Roman', Times, serif;
+}
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
-a:hover {
-    text-decoration:none;
-    border:0;
+li{
+    list-style:none;
 }
+
+a{
+    color:grey;
+}
+
+.page-body{
+    height:100vh;
+}
+
+ a:hover {
+        text-decoration: none;
+        border: 0;
+        /*font-size: larger;*/
+        color: #327DB8;
+    }
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    width: 100%;
 }
 
 /* Carousel */
@@ -43,10 +62,44 @@ a:hover {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
+.page-body{
+   display:flex;
+   flex-direction:column;
+   padding:0;
+}
+
+.custom-nav {
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.custom-navbar {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 50%;
+}
+
+    .custom-navbar li {
+        flex-grow: 1;
+        padding: 20px 50px;
+    }
+    /* Hide/rearrange for smaller screens */
+    @media screen and (max-width: 767px) {
+        /* Hide captions */
+        .carousel-caption {
         display: none;
     }
+
+
+    }
+
+@media screen and (min-width: 767px) {
+    .custom-navbar {
+        flex-direction: row;
+    }
 }
+
+

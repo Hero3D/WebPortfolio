@@ -5,48 +5,50 @@
 
 <link href="~/css/index.css" rel="stylesheet" type="text/css" />
 
-<img class="planet-gif noselect" src="~/images/PlanetGif3.gif" height="175" />
 
+<main class="index-main">
+    <header class="index-intro">
+        <h1 class="index-title">Welcome! <br /> My name is Nathan Bosman.</h1>
+        <div>Github</div>
+        <h2 class="index-subtitle">I'm a Full Stack Software Developer with a passion for learning.</h2>
+    </header>
 
-<header class="index-intro noselect">
-    <h1 class="index-title">Nathan Bosman</h1>
-    <h4 class="index-subtitle">Full Stack Software Developer</h4>
-</header>
+    <img class="index-main-image" src="~/images/astrographicCropped.png"/>
+</main>
 
-<section class="index-nav">
-    <ul class="index-nav-list">
-        <li><a asp-controller="Home" asp-action="About" class="index-nav-list-item">About</a></li>
-        <li><button class="index-nav-list-item index-nav-projects" style="border:none; background:none;">Projects</button></li>
-        <li><a asp-controller="Home" asp-action="Contact" class="index-nav-list-item ">Contact</a></li>
-    </ul>
-</section>
+<footer class="index-skills">
 
+    <div class="index-skills-languages">
+        <h3>Languages</h3>
+        <ul>
+            <li><img src="~/images/skills/languages/Csharp.png" /></li>
+            <li><img src="~/images/skills/languages/SQL.png" /></li>
+            <li><img src="~/images/skills/languages/JS.png" /></li>
+            <li><img src="~/images/skills/languages/Java.png" /></li>
+            <li><img src="~/images/skills/languages/HTML.png" /></li>
+            <li><img src="~/images/skills/languages/css.png" /></li>
+        </ul>
+    </div>
 
+    <div class="index-skills-frameworks">
+        <h3>Frameworks</h3>
+        <ul>
+            <li><img src="~/images/skills/frameworks/ASP.png" /></li>
+            <li><img src="~/images/skills/frameworks/NETCORE.png" /></li>
+            <li><img src="~/images/skills/frameworks/BOOTSTRAP.png" /></li>
+            <li><img src="~/images/skills/frameworks/jQUERY.png" /></li>
+            <li><img src="~/images/skills/frameworks/VANILLAJS.png" /></li>
+        </ul>
+    </div>
 
-<script>
-
-    $(".index-nav-projects").click(function () {
-
-        $.ajax({
-            url: "Home/Projects",
-            type: "GET",
-            success: function (response) {
-
-                location.hash = 'Contact';
-
-
-                $(".container").fadeOut(500, function () {
-                    $(".container").html(response);
-                    $('.container').fadeIn(500);
-                })
-
-                $(window).on('popstate', function () {
-                    location.reload(true);
-                });
-            }
-        });
-    })
-
-
-
-</script>
+    <div class="index-skills-services">
+        <h3>Services</h3>
+        <ul>
+            <li><img src="~/images/skills/services/AWS.png" /></li>
+            <li><img src="~/images/skills/services/AZURE.png" /></li>
+            <li><img src="~/images/skills/services/MSSQL.png" /></li>
+            <li><img src="~/images/skills/services/GIT.png" /></li>
+            <li><img src="~/images/skills/services/GITHUB.png" /></li>
+        </ul>
+    </div>
+</footer>
