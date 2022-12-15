@@ -22,8 +22,21 @@ li{
 
 }
 
+.index-title{
+    font-size:4rem;
+}
 
-.index-main-image{
+.index-subtitle{
+    color:grey;
+}
+
+
+
+.index-intro-link :hover{
+    height:35px;
+}
+
+.index-main-image {
     height: 550px;
     padding: 50px;
 }
@@ -45,6 +58,12 @@ li{
         padding: 5px;
     }
 
+    .index-skills div > h3{
+        font-weight: bold;
+        color:grey;
+        text-align:left;
+    }
+
 
 @media screen and (max-width: 767px) {
     .index-main, .index-skills{
@@ -62,11 +81,13 @@ li{
 
 @media screen and (min-width: 767px){
     .index-main {
-        padding-bottom: 150px;
+        padding-bottom: 100px;
     }
+    /*.index-subtitle {
+        width: 75%;
+    }*/
 
-
-    .index-intro {
-        padding-left: 150px;
+    .index-intro{
+        flex-grow: 1;
     }
 }

@@ -26,6 +26,7 @@ a{
         border: 0;
         /*font-size: larger;*/
         color: #327DB8;
+        cursor:pointer;
     }
 
 /* Wrapping element */
@@ -33,7 +34,7 @@ a{
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    width: 100%;
+    width: 80%;
 }
 
 /* Carousel */
