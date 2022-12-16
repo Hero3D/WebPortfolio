@@ -88,18 +88,24 @@ a{
         padding: 20px 50px;
     }
     /* Hide/rearrange for smaller screens */
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1000px) {
         /* Hide captions */
         .carousel-caption {
-        display: none;
+            display: none;
+        }
+
+        .custom-navbar{
+            width:100%;
+        }
+        .custom-navbar li{
+            border-bottom: 1px solid lightgrey;
+        }
     }
 
-
-    }
-
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 1000px) {
     .custom-navbar {
         flex-direction: row;
+
     }
 }
 

@@ -1,16 +1,15 @@
 ﻿body {
-    
 }
 
-.container{
-    width:70%;
+.container {
+    width: 70%;
 }
 
-.container, .projects-project, .project-header{
+.container, .projects-project, .project-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content:center;
+    align-content: center;
 }
 
 .container {
@@ -18,50 +17,122 @@
     flex-direction: column;
 }
 
-.projects-main{
-    padding-top:50px;
+.projects-main {
+    padding-top: 50px;
 }
 
 .projects-project {
-    padding: 15px;
     border: 1px solid black;
-
-}
-
-.projects-project {
     flex-direction: row;
-
+    text-align:center;
 }
-.project-header{
-    flex-direction:row;
+
+    .projects-project article {
+        flex-grow: 1;
+    }
+
+.project-header {
+    flex-direction: row;
 }
 
 .project-details {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding-right: 15px;
+    width: 100%;
+    height: 100%;
 }
 
-.project-details header, .project-details footer{
-    flex-grow: 1;
+    .project-details header, .project-details footer {
+        flex-grow: 1;
+    }
+
+    .project-details section {
+        flex-grow: 2;
+    }
+
+    .project-details footer a {
+        color: white;
+        background-color: grey;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    .project-details footer .live-demo {
+        background-color: #327DB8;
+    }
+
+    .project-details footer .screenshots {
+        background-color: green;
+    }
+
+.project-details-subtitle {
+    color: grey;
+    padding-left:10px;
 }
 
-.project-details section{
-    flex-grow: 2;
-}
-
-.projects-main section{
+.projects-main section {
     margin-bottom: 50px;
 }
 
+
 .project-image {
-    border-right: 1px solid black;
+    border-left: 1px solid black;
+    z-index:-1;
 }
 
-.project-image img{
-    width:300px;
-    height:250px;
-   
+.projects-stack{
+    padding:10px;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+}
+
+.projects-stack li{
+    padding: 5px;
+}
+
+
+
+.projects-stack li img{
+    height:25px;
+}
+
+.project-image img {
+    width: 500px;
+    height: 200px;
     /*height: 250px;*/
-    object-fit:cover;
+    object-fit: scale-down;
+}
+
+.project-footer{
+    display:flex;
+    justify-content:center;
+}
+.project-footer a{
+    margin: 5px;
+}
+
+@media screen and (max-width:1000px) {
+    .projects-project, .project-footer, .project-header{
+        flex-direction: column;
+    }
+
+    .project-image img {
+        width: 250px;
+        height: 125px;
+        object-fit: scale-down;
+    }
+
+    .project-image {
+        border: none;
+    }
+
+    .project-details{
+        padding:0;
+    }
+
+    .project-details-subtitle {
+        padding-left: 0;
+    }
 }
