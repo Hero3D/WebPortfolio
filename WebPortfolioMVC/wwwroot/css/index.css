@@ -23,11 +23,12 @@ li{
 }
 
 .index-title{
-    font-size:4rem;
+    font-size:5rem;
 }
 
 .index-subtitle{
     color:grey;
+    padding-bottom: 15px;
 }
 
 
@@ -37,7 +38,7 @@ li{
 }
 
 .index-main-image {
-    height: 550px;
+    height: 600px;
     padding: 50px;
 }
 
@@ -58,14 +59,23 @@ li{
         padding: 5px;
     }
 
-    .index-skills div > h3{
+    .index-skills div > h3 {
         font-weight: bold;
-        color:grey;
-        text-align:left;
+        color: grey;
+        text-align: left;
+    }
+
+    .skill-icon{
+        height: 45px;
+        filter: saturate(20%);
+    }
+
+    .skill-icon:hover {
+        filter: saturate(100%);
     }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
     .index-main, .index-skills{
         flex-direction:column;
     }
@@ -79,7 +89,7 @@ li{
     }
 }
 
-@media screen and (min-width: 767px){
+@media screen and (min-width: 1000px){
     .index-main {
         padding-bottom: 100px;
     }
@@ -89,5 +99,9 @@ li{
 
     .index-intro{
         flex-grow: 1;
+    }
+
+    .index-subtitle{
+        width:80%;
     }
 }
