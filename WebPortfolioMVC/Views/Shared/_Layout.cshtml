@@ -42,8 +42,8 @@
 
     <div class="custom-nav">
         <ul class="custom-navbar">
-            <li><a asp-action="Index" asp-controller="Home">CONTACT</a></li>
-            <li><a asp-action="Index" asp-controller="Home">HOME</a></li>
+            <li><a class="index-nav-contact">CONTACT</a></li>
+            <li><a class="index-nav-home">HOME</a></li>
             @*<li><a asp-action="Index" asp-controller="Home" class="index-nav-projects">PROJECTS</a></li>*@
             <li><a class="index-nav-projects">PROJECTS</a></li>
         </ul>
@@ -60,29 +60,59 @@
     
     <script>
 
-    $(".index-nav-projects").click(function () {
+        $(".index-nav-home").click(function () {
 
-        $.ajax({
-            url: "Home/Projects",
-            type: "GET",
-            success: function (response) {
+            $.ajax({
+                url: "Home/Home",
+                type: "GET",
+                success: function (response) {
 
-                location.hash = 'Contact';
+                    location.hash = 'Index';
 
 
-                $(".body-content").fadeOut(500, function () {
-                    $(".body-content").html(response);
-                    $('.body-content').fadeIn(500);
-                })
-
-                $(window).on('popstate', function () {
-                    location.reload(true);
-                });
-            }
+                    $(".body-content").fadeOut(500, function () {
+                        $(".body-content").html(response);
+                        $('.body-content').fadeIn(500);
+                    })
+                }
+            });
         });
-    })
+
+        $(".index-nav-projects").click(function () {
+
+            $.ajax({
+                url: "Home/Projects",
+                type: "GET",
+                success: function (response) {
+
+                    location.hash = 'Projects';
 
 
+                    $(".body-content").fadeOut(500, function () {
+                        $(".body-content").html(response);
+                        $('.body-content').fadeIn(500);
+                    })
+                }
+            });
+        });
+
+        $(".index-nav-contact").click(function () {
+
+            $.ajax({
+                url: "Home/Contact",
+                type: "GET",
+                success: function (response) {
+
+                    location.hash = 'Contact';
+
+
+                    $(".body-content").fadeOut(500, function () {
+                        $(".body-content").html(response);
+                        $('.body-content').fadeIn(500);
+                    })
+                }
+            });
+        });
 
 </script>
 </body>

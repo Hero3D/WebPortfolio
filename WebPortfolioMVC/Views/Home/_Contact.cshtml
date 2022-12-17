@@ -1,0 +1,35 @@
+﻿
+<h2 class="contact-title">Contact Information</h2>
+
+<section class="contact-info">
+
+    <article>
+        <p>Email: Nathan.Bosman.Software@gmail.com</p>
+        <p>Phone: 623 - 433 - 6416</p>
+    </article>
+
+    <img src="~/images/Email_Icon_sm.png" />
+
+</section>
+
+<h2 class="contact-title">Send a message</h2>
+
+<section class="contact-form">
+    <p>Email</p>
+    <input type="email" />
+    <p>Message</p>
+    <input type="text" />
+    <input class="contact-form-submit" type="button" value="Send"/>
+</section>
+
+<script>
+    $('.contact-form-submit').click(function () {
+        $.ajax({
+            url: "Home/Message",
+            type: "POST",
+            success: function (response) {
+                alert('message received!');
+            }
+        });
+    });
+</script>

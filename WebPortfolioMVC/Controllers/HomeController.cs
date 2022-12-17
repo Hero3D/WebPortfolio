@@ -22,11 +22,23 @@ namespace WebPortfolioMVC.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
 
-            return View();
+            return PartialView("_Contact");
+        }
+
+        [HttpPost]
+        public IActionResult Message()
+        {
+            return PartialView("_Contact");
+        }
+
+        public IActionResult Home()
+        {
+            return PartialView("_Index");
         }
 
         public IActionResult Projects()
