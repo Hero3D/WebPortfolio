@@ -1,5 +1,4 @@
-﻿
-<h2 class="contact-title">Contact Information</h2>
+﻿<h2 class="contact-title">Contact Information</h2>
 
 <section class="contact-info">
 
@@ -15,20 +14,47 @@
 <h2 class="contact-title">Send a message</h2>
 
 <section class="contact-form">
+
     <p>Email</p>
-    <input type="email" />
+    <input class="email-sender" type="email" />
+
+    <p>Name</p>
+    <input class="email-name" type="text" />
+
+    <p>Subject</p>
+    <input class="email-subject" type="text" />
+
     <p>Message</p>
-    <input type="text" />
-    <input class="contact-form-submit" type="button" value="Send"/>
+    <input class="email-message" type="text" />
+
+    <input class="contact-form-submit" type="button" value="Send" />
 </section>
 
 <script>
     $('.contact-form-submit').click(function () {
+
         $.ajax({
-            url: "Home/Message",
             type: "POST",
+            url: "Home/Message/",
+            data: {
+                "message": {
+                    Email: $('.email-sender').val(),
+                    Name: $('.email-name').val(),
+                    Subject: $('.email-subject').val(),
+                    Message: $('.email-message').val()
+                }
+            },
             success: function (response) {
-                alert('message received!');
+                // Clear Fields
+                $('.email-sender').val('');
+                $('.email-name').val('');
+                $('.email-subject').val('');
+                $('.email-message').val('');
+
+                alert(response);
+            },
+            failure: function (response) {
+                alert(response);
             }
         });
     });
