@@ -4,6 +4,7 @@
     justify-content:center;
     align-items: center;
     width:35%;
+    height:100%;
 }
 
 .contact-info {
@@ -41,6 +42,7 @@
     background-color: #327DB8;
     color:white;
     border: 1px solid black;
+    font-size:1.65rem;
 }
 
 .contact-info-img {

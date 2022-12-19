@@ -61,6 +61,20 @@
     
     <script>
 
+        $(document).ready(function () {
+            $.ajax({
+                url: "Home/Home",
+                type: "GET",
+                success: function (response) {
+                    location.hash = 'Index';
+                    $(".body-content").fadeOut(500, function () {
+                        $(".body-content").html(response);
+                        $('.body-content').fadeIn(500);
+                    })
+                }
+            });
+        });
+
         $(".index-nav-home").click(function () {
 
             $.ajax({
