@@ -1,0 +1,40 @@
+﻿.container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.contact-form{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.contact-info-img {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.contact-info-img img {
+        height: 150px;
+        transform:rotate(45deg);
+}
+.contact-info-details {
+    text-align: left;
+    flex-grow: 2;
+}
+
+/*@media screen and (max-width:1000px){
+    .contact-info-img img {
+        height: 25px;
+    }
+}*/
