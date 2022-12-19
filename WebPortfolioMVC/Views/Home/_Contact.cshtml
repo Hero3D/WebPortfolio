@@ -1,11 +1,11 @@
 ﻿<link href="~/css/contact.css" rel="stylesheet" />
 
-<h2 class="contact-title">Contact Information</h2>
+<h3 class="contact-title">Contact Information</h3>
 
 <section class="contact-info">
 
     <article class="contact-info-details">
-        <p>Email: Nathan.Bosman.Software@gmail.com</p>
+        <p>Email: <span class="contact-email">Nathan.Bosman.Software@gmail.com</span></p>
         <p>Phone: 623 - 433 - 6416</p>
     </article>
 
@@ -15,7 +15,7 @@
 
 </section>
 
-<h2 class="contact-title">Send a message</h2>
+<h3 class="contact-title">Send a message</h3>
 
 <section class="contact-form">
 
@@ -29,12 +29,14 @@
     <input class="email-subject" type="text" />
 
     <p>Message</p>
-    <input class="email-message" type="text" />
-
-    <input class="contact-form-submit" type="button" value="Send" />
+    <textarea class="email-message" rows="10"/>
+    <div>
+        <input class="contact-form-submit pull-right" type="button" value="Send" />
+    </div>
 </section>
 
 <script>
+
     $('.contact-form-submit').click(function () {
 
         $.ajax({
