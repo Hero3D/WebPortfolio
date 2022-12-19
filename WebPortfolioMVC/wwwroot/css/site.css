@@ -87,6 +87,25 @@ a{
         flex-grow: 1;
         padding: 20px 50px;
     }
+
+.light-mode-toggle{
+    position:fixed;
+    right:0;
+    font-size:3rem;
+    padding:15px;
+    cursor:pointer;
+    color:grey;
+}
+
+.dark-mode{
+    background-color:black;
+    color:white;
+    border-color:white;
+}
+
+    .light-mode-toggle:hover {
+        color: #327DB8;
+    }
     /* Hide/rearrange for smaller screens */
     @media screen and (max-width: 1000px) {
         /* Hide captions */
